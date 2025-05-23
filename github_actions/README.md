@@ -38,3 +38,4 @@ To use the pipeline:
 ## API Endpoints
 
 - `GET /`: Returns a "Hello World" message 
+- Testing 

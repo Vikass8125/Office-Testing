@@ -13,6 +13,7 @@ services:
       - /app/venv
     environment:
       - PYTHONUNBUFFERED=1
+      - CORS_ORIGINS=http://localhost:5173,http://frontend:5173
     networks:
       - app-network
     restart: unless-stopped
@@ -28,7 +29,7 @@ services:
       - ./frontend:/app
       - /app/node_modules
     environment:
-      - VITE_API_URL=http://backend:8000
+      - VITE_API_URL=http://localhost:8000
     depends_on:
       - backend
     networks:
